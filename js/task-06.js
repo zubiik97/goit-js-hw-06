@@ -4,9 +4,9 @@ inputEl.addEventListener('blur', borderColorBlue);
 
 function borderColorBlue(event) {
     const dataInputLength = Number(inputEl.dataset.length);
-    const valuInputLength = Number(inputEl.value.length);
+    const valueInputLength = Number(inputEl.value.length);
   
-    if (inputValueLength === inputDataLength) {
+    if (valueInputLength === dataInputLength) {
       inputEl.classList.remove('invalid');
       inputEl.classList.add('valid');
 

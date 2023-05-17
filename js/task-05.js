@@ -1,10 +1,10 @@
-const spanFind  = document.querySelector("#name-output");
-const inputText = document.querySelector("#name-input");
+const inputName = document.getElementById('name-input');
+const outputName = document.getElementById('name-output');
 
+const placeholder = (event) => {
+    outputName.textContent = inputName.value !== ''
+        ? event.currentTarget.value
+        : 'Anonymous';
+};
 
-inputText.addEventListener('input', readingInput);
-
-function readingInput (event) {
-    console.log(event.currentTarget.value);
-    spanFind.textContent = event.currentTarget.value;
-}
+inputName.addEventListener('input', placeholder);
